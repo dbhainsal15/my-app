@@ -1,10 +1,10 @@
 node{
    stage('SCM Checkout'){
-     git 'https://github.com/javahometech/my-app'
+     git 'https://github.com/dbhainsal15/my-app'
    }
    stage('Compile-Package'){
       // Get maven home path
-      def mvnHome =  tool name: 'dillip', type: 'maven'   
+      def mvnHome =  tool name: 'mvn-3', type: 'maven'   
       sh "${mvnHome}/bin/mvn package"
    }
    /* stage('Email Notification'){
