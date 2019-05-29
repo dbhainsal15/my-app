@@ -3,6 +3,10 @@ node{
      git 'https://github.com/dbhainsal15/my-app'
    }
    stage('Compile-Package'){
+      sh 'mvn package'
+   }
+      
+   /*stage('Compile-Package'){
       // Get maven home path
       def mvnHome =  tool name: 'maven3', type: 'maven'   
       sh "${mvnHome}/bin/mvn package"
@@ -19,5 +23,5 @@ node{
        message: 'Welcome to Jenkins, Slack!', 
        teamDomain: 'javahomecloud',
        tokenCredentialId: 'slack-demo'
-   } 
+   } */
 }
